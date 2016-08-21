@@ -1,0 +1,117 @@
+<style type="text/css">
+  .change_width{
+    width: 20%;
+    float: left;
+    margin-right: 20px;
+  }
+</style>
+
+<%= form_for [:admin, @patient], :html => { :class => "form-horizontal patient" } do |f| %>
+
+  <% if @patient.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @patient.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :first_name, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :first_name, :required => true, :size => 30, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:first_name) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :middle_name, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :middle_name, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:middle_name) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :last_name, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :last_name, :required => true, :size => 30, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:last_name) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :date_of_birth, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select :year, {}, {}, class: "sel_year form-control change_width", rel: @patient.year %>
+      <%= f.select :month, {}, {}, class: "sel_month form-control change_width", rel: @patient.month %>
+      <%= f.select :day, {}, {}, class: "sel_day form-control change_width", rel: @patient.day %>
+    </div>
+    <%=f.error_span(:year) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :gender, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+    <div class="form-control" style="height:auto;border:none;padding:0px 20px;border-radius: 0px;">
+        <div class="radio">
+          <%= f.radio_button :gender, 0, :checked => true %><%= t("patinet.not_available") %>
+        </div>
+        <div class="radio">
+          <%= f.radio_button :gender, 1 %><%= t("patinet.Male") %>
+        </div>
+        <div class="radio">
+          <%= f.radio_button :gender, 2 %><%= t("patinet.Female") %>
+        </div>
+    </div>
+    </div>
+    <%=f.error_span(:gender) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :status, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select :status, selectData(:status), {}, class: "form-control change_width" %>
+    </div>
+    <%=f.error_span(:status) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :location_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select :location_id, selectData(:location_id), {}, class: "form-control change_width" %>
+    </div>
+    <%=f.error_span(:location_id) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_area :description, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:description) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                admin_patients_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>
+
+<script type="text/javascript">
+  $(function () { 
+    $.ms_DatePicker({ 
+            YearSelector: ".sel_year", 
+            MonthSelector: ".sel_month", 
+            DaySelector: ".sel_day" 
+    }); 
+  });
+</script>

@@ -1,0 +1,79 @@
+#Requirements for Patient module
+
+##Prerequisites:
+ - Deliverables shall be implemented in Ruby on Rails > 3.2.
+ - The service could use MySQL/SQLite.
+ - Application shall implement unit and integration tests, as needed.
+ - Tests shall be part of the deliverable.
+
+##Deliverables
+  - Fully functional web page for viewing patient lists and create/edit patient information.
+  - Source code for all unit and integration tests, which shall all run successfully.
+
+##General Requirements
+ - Module name of the application shall be patients.
+ - Users do not need to authenticate themselves when accessing the web site.
+ - Filtering shall be used for deleted patients.
+ - When running the application it shall automatically create two locations: 'Test location 1' and 'Test location 2' which can be used for testing the web site.
+ - Patient id's shall use a running number starting from 1.
+ - I18n: the whole service needs to be viewed in English and in Chinese, there should be a language switch on every page.
+
+##Schema
+ - Following schema needs to be implemented.
+
+  1. Patient
+    * This is the core entity for this application. For each patient the following information needs to be tracked:
+       * First name, maximum size is 30 character.
+       * Middle name, maximum size is 10 characters.
+       * Last name, maximum size is 30 characters.
+       * Medical Record number
+       * Date of birth
+       * Gender
+       * Status
+       * Location
+       * Viewed Count
+    * First name, last name, status and location are mandatory.
+    * Gender can have any of the following values: Not available, Male, Female.
+    * Status can have any of the following values: Initial, Referred, Treatment, Closed.
+    * Patients can be viewed, created, updated and deleted. Deleted patienst are marked as deleted. Deleted patients cannot be viewed by users.
+    * Medical Record number (MR) is automatically defined as: 'MR<n>' where n is the id number from the database record, padded with 6 zeros, ie MR000024 for patient with id 24. MR shall not be stored in database.
+    * Create a scope for patient entity 'onTreatment' for all patients that currently have status 'Treatment'.
+    * Viewed count is a counter of how many times a patient is viewed.
+
+  2. Location
+    * Each patient belongs to one and only one location. For each location the following information is needed:
+       * Code, maximum 10 characters
+       * Name, maximum 80 characters
+    * Name is mandatory.
+
+##Functions
+  1. View List of Patients
+    - Display a list of all existing patients with the following information:
+       * MR
+       * Fullname (last, first middle)
+       * Patient's age in years
+       * Gender
+       * Status
+       * Location name
+       * Viewed Count
+    - Users can view patient record. Clicking on location will open the view location page.
+    - Keep a count of how many times a patient is viewed.
+  2. New/Update Patient
+    - Location is selected from a drop-down menu. Status is selected from drop-down menu. Gender shall be implemented using radio buttons.
+  3. Delete Patient
+    - When patient is deleted he is marked for deletion.
+  4. View Location
+    - This will display one record for a specific location.
+    - This will also display patients from that specific location.
+  5. I18n
+    - The whole service could be viewed in English and in Chinese, there
+      should be a language switch on every page.
+
+##About me
+
+```ruby
+   developer = [
+    nickName: "Tomi",
+    site: "http://sohotdai.github.io/"
+  ]
+```

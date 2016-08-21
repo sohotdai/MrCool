@@ -1,0 +1,86 @@
+zh-CN:
+  sohotdai: 奔跑的荷尔蒙
+  navbar:
+    create: 新增
+    english: 英语
+    chinese: 简体中文
+    req_for_patinets: 病人需求
+  patinet:
+    fullname: 全名
+    undefined: 未填写
+    age: 年龄
+    gender: 性别
+    status: 状态
+    viewed_count: 已浏览
+    ago: 前
+    day: 日
+    hour: 时
+    minute: 分
+    month: 月
+    second: 秒
+    year: 年
+    rftl: 位置记录
+    cfd: 点击查看详情
+    mr: 病历号
+    not_available: 就不告诉你
+    Male: 男
+    Female: 女
+    Initial: 初始
+    Referred: 提交
+    Treatment: 治疗
+    Closed: 已关闭
+    created_at: 创建时间
+    updated_at: 更新时间
+    date_of_birth: 出生日期
+    first_name: 名字
+    middle_name: 中间名字
+    last_name: 姓
+    dotp: 病人详细信息
+    Destroy: 删除
+    Update: 更新
+    d_o_t_l: 位置详细信息
+    create_patient: 创建记录
+    update_patient: 更新数据
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: 大约一小时
+        other: 大约 %{count} 小时
+      about_x_months:
+        one: 大约一个月
+        other: 大约 %{count} 个月
+      about_x_years:
+        one: 大约一年
+        other: 大约 %{count} 年
+      almost_x_years:
+        one: 接近一年
+        other: 接近 %{count} 年
+      half_a_minute: 半分钟
+      less_than_x_minutes:
+        one: 不到一分钟
+        other: 不到 %{count} 分钟
+      less_than_x_seconds:
+        one: 不到一秒
+        other: 不到 %{count} 秒
+      over_x_years:
+        one: 一年多
+        other: "%{count} 年多"
+      x_days:
+        one: 一天
+        other: "%{count} 天"
+      x_minutes:
+        one: 一分钟
+        other: "%{count} 分钟"
+      x_months:
+        one: 一个月
+        other: "%{count} 个月"
+      x_seconds:
+        one: 一秒
+        other: "%{count} 秒"
+    prompts:
+      day: 日
+      hour: 时
+      minute: 分
+      month: 月
+      second: 秒
+      year: 年

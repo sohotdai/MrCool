@@ -1,0 +1,43 @@
+en:
+  sohotdai: sohotdai
+  navbar:
+    create: Create
+    english: English
+    chinese: Chinese
+    req_for_patinets: Requirements for Patients
+  patinet:
+    fullname: Fullname
+    undefined: undefined
+    age: age
+    gender: gender
+    status: status
+    viewed_count: Viewed Count
+    ago: ago
+    day: day
+    hour: hour
+    minute: minute
+    month: month
+    second: second
+    year: year
+    rftl: record for the location
+    cfd: Click for details
+    mr: Medical Record Number
+    not_available: Not available
+    Male: Male
+    Female: Female
+    Initial: Initial
+    Referred: Referred
+    Treatment: Treatment
+    Closed: Closed
+    create_time: Create time
+    update_time: Update time
+    date_of_birth: Date of birth
+    first_name: First name
+    middle_name: Middle name
+    last_name: Last name
+    dotp: detials of the patient
+    Destroy: Destroy
+    Update: Update
+    d_o_t_l: detials of the location
+    create_patient: Create Patient
+    update_patient: Update Patient

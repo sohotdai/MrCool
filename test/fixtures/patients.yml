@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  medical_record_number: MR000001
+  year: 2016
+  month: 8
+  day: 8
+  gender: 1
+  status: 1
+  location_id: 1
+  viewed_count: 1
+  is_deleted: 0
+  description: MyText
+
+two:
+  id: 2
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  medical_record_number: MR000002
+  year: 1992
+  month: 4
+  day: 3
+  gender: 1
+  status: 1
+  location_id: 2
+  viewed_count: 1
+  is_deleted: 1
+  description: MyText

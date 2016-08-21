@@ -1,0 +1,9 @@
+
+one: 
+  id: 1
+  name: Test location 1
+  code: 001
+two: 
+  id: 2
+  name: Test location 2
+  code: 002
