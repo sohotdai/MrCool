@@ -1,16 +1,16 @@
-#Requirements for Patient module
+# Requirements for Patient module
 
-##Prerequisites:
+## Prerequisites:
  - Deliverables shall be implemented in Ruby on Rails > 3.2.
  - The service could use MySQL/SQLite.
  - Application shall implement unit and integration tests, as needed.
  - Tests shall be part of the deliverable.
 
-##Deliverables
+## Deliverables
   - Fully functional web page for viewing patient lists and create/edit patient information.
   - Source code for all unit and integration tests, which shall all run successfully.
 
-##General Requirements
+## General Requirements
  - Module name of the application shall be patients.
  - Users do not need to authenticate themselves when accessing the web site.
  - Filtering shall be used for deleted patients.
@@ -18,7 +18,7 @@
  - Patient id's shall use a running number starting from 1.
  - I18n: the whole service needs to be viewed in English and in Chinese, there should be a language switch on every page.
 
-##Schema
+## Schema
  - Following schema needs to be implemented.
 
   1. Patient
@@ -46,7 +46,7 @@
        * Name, maximum 80 characters
     * Name is mandatory.
 
-##Functions
+## Functions
   1. View List of Patients
     - Display a list of all existing patients with the following information:
        * MR
@@ -69,11 +69,11 @@
     - The whole service could be viewed in English and in Chinese, there
       should be a language switch on every page.
 
-##About me
+## About me
 
 ```ruby
    developer = [
-    nickName: "Tomi",
+    nickName: "sohotdai",
     site: "http://sohotdai.github.io/"
   ]
 ```
